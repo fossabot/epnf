@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Phone format</title>
+  <style>
+    body {
+      background: #607d8a;
+    }
+
+    h1 {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.10), 0 1rem 0.75rem rgba(0, 0, 0, 0.01);
+      color: #37474f;
+      left: 50%;
+      padding: 5rem;
+      position: absolute;
+      top: 25%;
+      transform: translate(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script src="main.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    let para = document.createElement('h1')
+    let node = document.createTextNode(phone('000000000000').country('BY', '+ '))
+    para.appendChild(node)
+
+    let element = document.getElementById('app')
+    element.appendChild(para)
+  </script>
+</body>
+
+</html>
